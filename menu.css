@@ -1,0 +1,30 @@
+.centred-menu, .cm-item{
+  height: 20px;
+  vertical-align: middle;
+  background: #fff;
+}
+.cm-item:hover {
+background: lightblue;
+}
+.centred-menu {
+display: inline-block;
+overflow-y: hidden;
+width: fit-content;
+vertical-align: middle;
+--selected-item: 0;
+padding: 2px 4px;
+border: solid 1px grey;
+}
+.cm-item {
+display: table-row;
+}
+.cm-list {
+display: table;
+/* position: relative; */
+transform: translateY(calc(-20px * var(--selected-item)));
+z-index: 9;
+}
+.cm-list input[type=radio]{display: none;}
+.centred-menu:hover { 
+overflow-y: visible;
+}
